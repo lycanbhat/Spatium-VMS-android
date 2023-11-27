@@ -7,14 +7,19 @@ import colors from '../../constants/colors';
 
 interface Props {
   showButton?: boolean;
+  onPress: () => void;
 }
 
-const Header: React.FC<Props> = ({showButton}) => {
+const Header: React.FC<Props> = ({showButton, onPress}) => {
   return (
     <View style={styles.container}>
       <Image style={{width: '15%'}} resizeMode="contain" source={images.logo} />
       {showButton && (
-        <CustomButton backgroundColor={colors.secondary} text="Logout" />
+        <CustomButton
+          onPress={onPress}
+          backgroundColor={colors.secondary}
+          text="Logout"
+        />
       )}
     </View>
   );

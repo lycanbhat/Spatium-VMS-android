@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 import styles from './styles';
 import CustomField from '../custom_field';
 
-const Form = () => {
+const Form: React.FC = () => {
   return (
     <>
       <View style={{marginBottom: 40}}>
