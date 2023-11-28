@@ -3,10 +3,10 @@ import colors from '../../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
     backgroundColor: colors.background,
   },
   contentContainer: {
+    flexGrow: 1,
     padding: 20,
   },
 });

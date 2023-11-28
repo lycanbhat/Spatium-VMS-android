@@ -13,7 +13,7 @@ interface Props {
 const Header: React.FC<Props> = ({showButton, onPress}) => {
   return (
     <View style={styles.container}>
-      <Image style={{width: '15%'}} resizeMode="contain" source={images.logo} />
+      <Image style={{width: 150}} resizeMode="contain" source={images.logo} />
       {showButton && (
         <CustomButton
           onPress={onPress}

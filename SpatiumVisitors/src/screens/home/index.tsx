@@ -7,7 +7,7 @@ import Tile from './component/tile';
 import CustomButton from '../../components/custom_button';
 import {HomeProps} from '../../types/navigation';
 
-const Home: React.FC<HomeProps> = ({navigation: {popToTop}}) => {
+const Home: React.FC<HomeProps> = ({navigation: {popToTop, navigate}}) => {
   return (
     <Layout>
       <Header onPress={() => popToTop()} showButton />
@@ -22,7 +22,11 @@ const Home: React.FC<HomeProps> = ({navigation: {popToTop}}) => {
         <Tile title="02" subtitle="Visitors by client" isDropdown />
       </View>
 
-      <CustomButton onPress={() => {}} text="Go to VMS Kiosk" width={400} />
+      <CustomButton
+        onPress={() => navigate('Welcome')}
+        text="Go to VMS Kiosk"
+        width={400}
+      />
     </Layout>
   );
 };

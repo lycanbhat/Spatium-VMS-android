@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import SignIn from '../screens/sign_in';
 import Home from '../screens/home';
 import {StackParamList} from '../types/navigation';
+import Welcome from '../screens/welcome';
 
 const Stack = createStackNavigator<StackParamList>();
 
@@ -23,6 +24,13 @@ const Route: React.FC = () => {
           }}
           name="Home"
           component={Home}
+        />
+        <Stack.Screen
+          options={{
+            headerShown: false,
+          }}
+          name="Welcome"
+          component={Welcome}
         />
       </Stack.Navigator>
     </NavigationContainer>
