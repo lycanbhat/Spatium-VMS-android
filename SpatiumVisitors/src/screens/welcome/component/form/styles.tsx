@@ -1,9 +1,13 @@
-import {StyleSheet} from 'react-native';
-import colors from '../../constants/colors';
+import {Dimensions, StyleSheet} from 'react-native';
+import colors from '../../../../constants/colors';
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.background,
+    padding: 60,
+  },
   title: {
-    fontSize: 40,
+    fontSize: 24,
     fontFamily: 'IBMPlexSans-Bold',
     color: colors.white,
   },

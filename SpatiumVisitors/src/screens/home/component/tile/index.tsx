@@ -3,14 +3,13 @@ import {View, Text} from 'react-native';
 import styles from './styles';
 import {ChevronDown} from 'react-native-feather';
 import colors from '../../../../constants/colors';
+import {PropsHomeTile} from '../../../../common/interfaces';
 
-interface Props {
-  title: string;
-  subtitle: string;
-  isDropdown?: boolean;
-}
-
-const Tile: React.FC<Props> = ({title, subtitle, isDropdown = false}) => {
+const Tile: React.FC<PropsHomeTile> = ({
+  title,
+  subtitle,
+  isDropdown = false,
+}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.fieldTitle}>{title}</Text>

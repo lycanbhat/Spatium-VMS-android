@@ -21,7 +21,10 @@ const CustomButton: React.FC<Props> = ({
       <View
         style={[
           styles.container,
-          {backgroundColor: backgroundColor || colors.primary, width},
+          {
+            backgroundColor: backgroundColor || colors.primary,
+            width,
+          },
         ]}>
         <Text style={styles.text}>{text}</Text>
       </View>

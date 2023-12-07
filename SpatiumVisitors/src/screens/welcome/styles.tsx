@@ -3,10 +3,13 @@ import colors from '../../constants/colors';
 
 const styles = StyleSheet.create({
   contentContainer: {flex: 1},
-  digitalPassContainer: {alignItems: 'center', justifyContent: 'center'},
+  digitalPassContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   innerContentContainer: {
     flex: 1,
-    width: '75%',
   },
   title: {
     color: colors.white,

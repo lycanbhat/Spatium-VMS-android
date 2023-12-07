@@ -2,7 +2,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import SignIn from '../screens/sign_in';
 import Home from '../screens/home';
-import {StackParamList} from '../types/navigation';
+import {StackParamList} from '../common/types';
 import Welcome from '../screens/welcome';
 
 const Stack = createStackNavigator<StackParamList>();

@@ -5,7 +5,7 @@ import Header from '../../components/header';
 import styles from './styles';
 import Tile from './component/tile';
 import CustomButton from '../../components/custom_button';
-import {HomeProps} from '../../types/navigation';
+import {HomeProps} from '../../common/types';
 
 const Home: React.FC<HomeProps> = ({navigation: {popToTop, navigate}}) => {
   return (

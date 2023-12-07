@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../../../components/layout';
-import {ImageBackground} from 'react-native';
+import {Animated, Dimensions, ImageBackground, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import images from '../../../../constants/images';
 import styles from './styles';
@@ -12,8 +12,14 @@ interface Props {
 
 const CustomBackground: React.FC<Props> = ({children}) => {
   return (
-    <Layout>
+    <Animated.View
+      style={{
+        flex: 1,
+        padding: 20,
+        backgroundColor: colors.background,
+      }}>
       <ImageBackground
+        resizeMode="cover"
         source={images.background}
         style={styles.imageBackgroundContainer}
         blurRadius={1}>
@@ -23,7 +29,7 @@ const CustomBackground: React.FC<Props> = ({children}) => {
           {children}
         </LinearGradient>
       </ImageBackground>
-    </Layout>
+    </Animated.View>
   );
 };
 

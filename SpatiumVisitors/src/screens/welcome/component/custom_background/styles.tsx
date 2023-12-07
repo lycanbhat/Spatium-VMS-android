@@ -1,11 +1,9 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import colors from '../../../../constants/colors';
 
 const styles = StyleSheet.create({
   imageBackgroundContainer: {
     flex: 1,
-    width: '100%',
-    height: '100%',
     borderRadius: 20,
     overflow: 'hidden',
     backgroundColor: colors.primary,
