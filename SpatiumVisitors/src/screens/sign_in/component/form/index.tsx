@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 import styles from './styles';
 import CustomField from '../../../../components/custom_field';
 import {PropsSignInForm} from '../../../../common/interfaces';
-import {DispatchSignInType} from '../../../../common/enums';
+import {DispatchSignInType, KeyboardType} from '../../../../common/enums';
 
 const Form: React.FC<PropsSignInForm> = ({state, dispatch}) => {
   return (
@@ -18,7 +18,7 @@ const Form: React.FC<PropsSignInForm> = ({state, dispatch}) => {
         onChangeText={(value: string) =>
           dispatch({type: DispatchSignInType.email, payload: value})
         }
-        keyboardType="email-address"
+        keyboardType={KeyboardType['email-address']}
         placeholder="Enter email"
         text="Email"
       />

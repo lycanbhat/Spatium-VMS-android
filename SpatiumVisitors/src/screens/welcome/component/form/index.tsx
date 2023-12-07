@@ -5,7 +5,11 @@ import CustomField from '../../../../components/custom_field';
 import CustomButton from '../../../../components/custom_button';
 import {ArrowRight} from 'react-native-feather';
 import styles from './styles';
-import {DispatchWelcomeType} from '../../../../common/enums';
+import {
+  DispatchWelcomeType,
+  FieldType,
+  KeyboardType,
+} from '../../../../common/enums';
 
 type PropsState = {
   fullName: string;
@@ -53,12 +57,12 @@ const Form: React.FC<Props> = ({flex, state, dispatch}) => {
           text="Full Name"
         />
         <CustomField
-          fieldType={'email'}
+          fieldType={FieldType.email}
           value={state.email}
           onChangeText={(value: string) =>
             dispatch({type: DispatchWelcomeType.email, payload: value})
           }
-          keyboardType="email-address"
+          keyboardType={KeyboardType['email-address']}
           placeholder="Enter email"
           text="Email"
         />
@@ -67,7 +71,7 @@ const Form: React.FC<Props> = ({flex, state, dispatch}) => {
           onChangeText={(value: string) =>
             dispatch({type: DispatchWelcomeType.mobile, payload: value})
           }
-          keyboardType="phone-pad"
+          keyboardType={KeyboardType['phone-pad']}
           placeholder="Enter mobile"
           text="Mobile"
         />
@@ -80,7 +84,7 @@ const Form: React.FC<Props> = ({flex, state, dispatch}) => {
           }}>
           <CustomButton
             text="Clear all"
-            onPress={() => console.log(state)}
+            onPress={() => dispatch({type: DispatchWelcomeType.clear})}
             backgroundColor={colors.secondary}
           />
           <View

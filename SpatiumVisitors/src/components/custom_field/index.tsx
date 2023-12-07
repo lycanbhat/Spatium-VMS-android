@@ -1,31 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Text, TextInput, View} from 'react-native';
 import styles from './styles';
 import colors from '../../constants/colors';
 import {Check} from 'react-native-feather';
 import {validation} from './validation';
+import {FieldType, KeyboardType} from '../../common/enums';
+import {PropsCustomField} from '../../common/interfaces';
 
-interface Props {
-  value: string;
-  onChangeText: any;
-  text: string;
-  secureText?: boolean;
-  placeholder?: string;
-  keyboardType?: 'default' | 'email-address' | 'phone-pad';
-  fieldType?: 'text' | 'email' | 'dropdown';
-}
-
-enum FieldType {
-  'text',
-  'email',
-  'dropdown',
-}
-
-const CustomField: React.FC<Props> = ({
+const CustomField: React.FC<PropsCustomField> = ({
   text,
   secureText,
   placeholder,
-  keyboardType = 'default',
+  keyboardType = KeyboardType.default,
   value,
   onChangeText,
   fieldType = FieldType.text,
@@ -56,7 +42,7 @@ const CustomField: React.FC<Props> = ({
             />
           </View>
         </>
-      ) : fieldType == 'email' ? (
+      ) : fieldType == FieldType.email ? (
         <>
           <Text style={styles.title}>{text}</Text>
           <View

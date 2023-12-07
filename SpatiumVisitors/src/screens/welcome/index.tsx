@@ -16,6 +16,12 @@ import Form from './component/form';
 import {PropsWelcomeState, PropsWelcomeAction} from '../../common/interfaces';
 import {DispatchWelcomeType} from '../../common/enums';
 
+const initialState = {
+  fullName: '',
+  email: '',
+  mobile: '',
+};
+
 const formReducer = (
   state: PropsWelcomeState,
   action: PropsWelcomeAction,
@@ -37,16 +43,14 @@ const formReducer = (
         ...state,
         mobile: action.payload,
       };
+    case DispatchWelcomeType.clear:
+      return {
+        ...initialState,
+      };
   }
 };
 
 const Welcome: React.FC = () => {
-  const initialState = {
-    fullName: '',
-    email: '',
-    mobile: '',
-  };
-
   const [state, dispatch] = useReducer(formReducer, initialState);
   const opacity = useRef(new Animated.Value(1)).current;
   const flex: Animated.Value = useRef(new Animated.Value(0)).current;

@@ -2,15 +2,9 @@ import React from 'react';
 import {Text, View, TouchableOpacity} from 'react-native';
 import styles from './styles';
 import colors from '../../constants/colors';
+import {PropsCustomButton} from '../../common/interfaces';
 
-interface Props {
-  text: string;
-  backgroundColor?: string;
-  width?: number;
-  onPress: () => void;
-}
-
-const CustomButton: React.FC<Props> = ({
+const CustomButton: React.FC<PropsCustomButton> = ({
   text,
   backgroundColor,
   width,
