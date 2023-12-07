@@ -67,6 +67,7 @@ const Form: React.FC<Props> = ({flex, state, dispatch}) => {
           text="Email"
         />
         <CustomField
+          maxLength={10}
           value={state.mobile}
           onChangeText={(value: string) =>
             dispatch({type: DispatchWelcomeType.mobile, payload: value})

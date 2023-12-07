@@ -15,6 +15,7 @@ const CustomField: React.FC<PropsCustomField> = ({
   value,
   onChangeText,
   fieldType = FieldType.text,
+  maxLength = 256,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
 
@@ -29,6 +30,7 @@ const CustomField: React.FC<PropsCustomField> = ({
               isFocused && {borderColor: colors.primary},
             ]}>
             <TextInput
+              maxLength={maxLength}
               value={value}
               onChangeText={onChangeText}
               keyboardType={keyboardType}

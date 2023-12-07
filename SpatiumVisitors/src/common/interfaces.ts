@@ -18,6 +18,7 @@ export interface PropsCustomField {
   placeholder?: string;
   keyboardType?: KeyboardType;
   fieldType?: FieldType;
+  maxLength?: number
 }
 
 //Sign-in

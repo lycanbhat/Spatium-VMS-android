@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   input: {
+    flex: 1,
     color: colors.white,
     fontSize: 16,
     fontFamily: 'IBMPlexSans-Regular',
